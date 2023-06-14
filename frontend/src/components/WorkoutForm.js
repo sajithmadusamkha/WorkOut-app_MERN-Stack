@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./assets/WorkoutForm.css";
+
 const WorkoutForm = () => {
   const [title, setTitle] = useState("");
   const [load, setLoad] = useState("");
@@ -52,6 +54,11 @@ const WorkoutForm = () => {
         onChange={(e) => setReps(e.target.value)}
         value={reps}
       />
+
+      <button>Add Workout</button>
+      {error && <div className="error">{error}</div>}
     </form>
   );
 };
+
+export default WorkoutForm;
